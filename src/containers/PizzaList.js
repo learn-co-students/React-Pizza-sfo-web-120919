@@ -14,9 +14,9 @@ class PizzaList extends Component {
           </tr>
         </thead>
         <tbody>
-          {
-            //render Pizza here
-          }
+          
+            {this.props.pizzas.map(p => <Pizza onEditPizza={this.props.onEditPizza} key={Math.random()} pizza={p} />)}
+          
         </tbody>
       </table>
     );
